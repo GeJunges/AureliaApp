@@ -1,0 +1,21 @@
+<template>
+    <ul class="list-group">
+        <li class="list-group-item" repeat.for="personagem of personagens">
+            <div>
+                <labe>Nome:</labe> ${personagem.name}</div>
+            <div>
+                <labe>Altura:</labe> ${personagem.height}</div>
+            <div>
+                <labe>Peso:</labe> ${personagem.mass}</div>
+            <div>
+                <labe>genero:</labe> ${personagem.gender}</div>
+            <div>
+                <labe>Filmes:</labe>
+                <div repeat.for="filme of personagem.films">
+                   ${filme.title}
+                </div>
+                <div>
+                    <labe>Espécie:</labe>${personagem.species}</div>
+        </li>
+    </ul>
+</template>
