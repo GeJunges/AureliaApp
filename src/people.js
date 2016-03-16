@@ -31,9 +31,5 @@ export class People {
         this.httpClient.get(filmeUrl)
             .then(response => personagem.films.push(response.content));
     }
-    ///Teste
-    ////Teste
-    
-    
 }
 
