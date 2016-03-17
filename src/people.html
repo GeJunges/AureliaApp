@@ -1,21 +1,30 @@
 <template>
+    <require from="people.css"> </require>
     <ul class="list-group">
-        <li class="list-group-item" repeat.for="personagem of personagens">
+        <li class="list-group-item personagem-linha" repeat.for="personagem of personagens">
             <div>
-                <labe>Nome:</labe> ${personagem.name}</div>
+                <labe>Nome:</labe> ${personagem.name}
+            </div>
             <div>
-                <labe>Altura:</labe> ${personagem.height}</div>
+                <labe>Altura:</labe> ${personagem.height}
+            </div>
             <div>
-                <labe>Peso:</labe> ${personagem.mass}</div>
+                <labe>Peso:</labe> ${personagem.mass}
+            </div>
             <div>
-                <labe>genero:</labe> ${personagem.gender}</div>
+                <labe>Genero:</labe> ${personagem.gender}
+            </div>
             <div>
                 <labe>Filmes:</labe>
-                <div repeat.for="filme of personagem.films">
-                   ${filme.title}
+                <div class="margem-esqueda" repeat.for="filme of personagem.films">
+                    ${filme.title}
                 </div>
                 <div>
-                    <labe>Espécie:</labe>${personagem.species}</div>
+                    <labe>Espécie:</labe>
+                    <div class="margem-esqueda" repeat.for="especie of personagem.species">
+                        ${especie.name}
+                    </div>
+                </div>
         </li>
     </ul>
 </template>

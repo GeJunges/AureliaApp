@@ -17,6 +17,7 @@ export class People {
 
     insiraPersonagens(personagens) {
         personagens.forEach(personagem => this.carregueFilmes(personagem))
+        personagens.forEach(personagem => this.carregueEspecie(personagem))
         this.personagens = personagens;
     }
 
@@ -30,6 +31,13 @@ export class People {
     carregueFilme(personagem, filmeUrl) {
         this.httpClient.get(filmeUrl)
             .then(response => personagem.films.push(response.content));
+    }
+
+    carregueEspecie(personagem) {
+        var especieUrl = personagem.species;
+        personagem.species = [];
+        this.httpClient.get(especieUrl)
+            .then(response => personagem.species.push(response.content));
     }
 }
 
