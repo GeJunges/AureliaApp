@@ -15,6 +15,7 @@ export class Sobre {
         });
     }
 
+
     activate() {
         return this.loadPosts();
     }
