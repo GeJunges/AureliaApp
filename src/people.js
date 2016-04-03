@@ -7,6 +7,8 @@ export class People {
         this.httpClient = httpClient;
         this.filmes = [];
         this.personagens = [];
+        this.isChecked = false;
+        this.backgroundColorClass = 'background-ligth-blue'
 
     }
 
@@ -38,6 +40,15 @@ export class People {
         personagem.species = [];
         this.httpClient.get(especieUrl)
             .then(response => personagem.species.push(response.content));
+    }
+
+
+    changeClass() {
+        if (this.isChecked) {
+            this.backgroundColorClass = 'background-gray';
+        } else {
+            this.backgroundColorClass = 'background-ligth-blue';
+        }
     }
 }
 

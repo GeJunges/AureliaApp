@@ -1,9 +1,8 @@
+import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 
+@inject(HttpClient)
 export class Inicio {
-    static inject() {
-        return [HttpClient];
-    }
 
     constructor(httpClient) {
         this.httpClient = httpClient;

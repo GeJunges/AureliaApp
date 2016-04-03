@@ -1,0 +1,9 @@
+<template bindable="router">
+    <ul class="nav navbar-nav navbar-fixed-top navbar-inverse">
+        <li repeat.for="navItem of router.navigation" class="${navItem.isActive ? 'active' : ''}">
+            <a href.bind="navItem.href">
+                    ${navItem.title}
+                </a>
+        </li>
+    </ul>
+</template>

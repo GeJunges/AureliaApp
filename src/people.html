@@ -1,6 +1,9 @@
 <template>
     <require from="people.css"> </require>
-    <ul class="list-group">
+
+    <input type="checkbox" id="ckColorChange" checked.bind="isChecked" change.delegate="changeClass()"> </input>
+
+    <ul class=${backgroundColorClass}>
         <li class="list-group-item personagem-linha" repeat.for="personagem of personagens">
             <div>
                 <labe>Nome:</labe> ${personagem.name}

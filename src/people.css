@@ -2,8 +2,21 @@ li.personagem-linha{
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 30px;
+    margin: 2px;
     }
 
 .margem-esqueda{
     padding-left: 60px;
+}
+
+.background-gray{
+    background-color: lightgray;
+}
+
+.background-ligth-blue{
+    background-color: lightskyblue;
+}
+
+#ckColorChange{
+    margin-bottom: 5px;
 }

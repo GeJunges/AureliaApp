@@ -1,22 +1,20 @@
-import {HttpClient} from 'aurelia-http-client';
+import {inject} from 'aurelia-framework';
 
 export class Sobre {
-    static inject() { return [HttpClient]; }
 
-    constructor(http) {
-        this.http = http;
-        this.posts = [];
-        this.subreddit_url = "http://reddit.com/r/gifs.json";
+    constructor() {
+        this.about = [];
+
     }
-
-    loadPosts() {
-        return this.http.jsonp(this.subreddit_url, "jsonp").then(r => {
-            this.posts = r.response.data.children;
-        });
+    loadSobre() {
+            this.obj = {"dadosPessoais":[
+                                        {"firstName":"Geciane", "lastName":"Junges"},
+                                        {"cidade":"Florianópolis", "pais":"Brasil"}
+                                    ]};
+        this.about.push(this.obj);
     }
-
 
     activate() {
-        return this.loadPosts();
+        this.loadSobre();
     }
 }
